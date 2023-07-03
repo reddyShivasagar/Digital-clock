@@ -1,0 +1,42 @@
+body{
+    background-image: linear-gradient(45deg,orangered,salmon);
+    background-repeat: no-repeat;
+    background-size: 100% 700px;
+    padding-top: 80px;
+}
+#clock{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 0, 0, 0.178);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 100%;
+    border: groove white 5px;
+}
+#clock:hover{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 32, 139, 0.349);
+    box-shadow: 0px 0px 7px black;
+    border-radius: 20px;
+    border: groove rgba(255, 255, 255, 0.562) 5px;
+}
+#Time
+{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+#dat{
+    text-align: center;
+    margin-top: -30px;
+    font-size: 30px;
+    color: rgba(240, 248, 255, 0.603);
+    text-shadow: 0px 0px 5px black;
+}
+#heading{
+    color:lime;
+    text-shadow: 0px 0px 10px black;
+    font-size: 60px;
+}

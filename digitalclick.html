@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="Stylesheet" href="./clock.css">
+</head>
+<body onload="currentTime()">
+    <center>
+    <h1 id="heading">Digital Clock</h1>
+
+<div id="clock">
+    <h1 id="Time" ></h1>
+    <h1 id="dat"></h1>
+    <h1 id="day"></h1>
+</div>
+</center>
+    <script>
+        function currentTime()
+        {
+            var date=new Date();
+            let hh=date.getHours();
+            let mm=date.getMinutes();
+            let ss=date.getSeconds();
+            am_pm="AM"
+            if(hh>12)
+            {
+                hh-=12;
+                am_pm="PM"
+            }
+            if(hh==0)
+            {
+                hh=12;
+            }
+            let time=hh+":"+mm+":"+ss+" "+am_pm;
+            let yy=date.getFullYear();
+            let mo=date.getMonth()+1;
+            let dd=date.getDate();
+            let date1=dd+"-"+mo+"-"+yy+" ";
+            document.getElementById("Time").innerHTML=time;
+            document.getElementById("dat").innerHTML=date1;
+            let t=setTimeout(function(){currentTime()},1000)
+            let day;
+            switch(new Date().getDay())
+            {
+                case 0:day="Sunday";
+                break;
+                case 1:day="Monday";
+                break;
+                case 3:day="Tuesday";
+                break;
+                case 4:day="Wednesday";
+                break;
+                case 5:day="Thursday";
+                break;
+                case 6:day="Friday";
+                break;
+                case 6:day="Saturday"
+            }
+            document.getElementById("day").innerHTML=day;
+        }
+    </script>
+</body>
+</html>
